@@ -2,11 +2,13 @@
 Tokeniser
 */
 
+#include "tokeniser.h"
+
 char*** tokeniser(char* path)
 {
   char*** output;
   FILE* file = fopen(path, "rt");
-  char** lines = readLines(file, countLines(file));
+  char** lines = readfile(file, countLines(file));
   uint32_t line = 0;
 
   while (line == 0)// total number less than total lines

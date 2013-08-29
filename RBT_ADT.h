@@ -2,8 +2,8 @@
 Header File for RBT_ADT
 */
 
-#define DATA uint32_t
-#define KEY uint32_t
+#define DATA void*
+#define KEY char*
 
 #include <stdint.h>
 #include <stdlib.h>
