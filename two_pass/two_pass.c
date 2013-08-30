@@ -32,9 +32,9 @@ uint32_t* assemble(char*** tokens, uint32_t lines)
   for (i = 0; i < lines; i++)
   {
     if(arrayContains(tokens[i][0], dataprocessing, 12))
-      assembledInstrs[i] = data_processing(tokens[i], symbolTable);
+      assembledInstrs[i] = data_processing(tokens[i]);
     else if(arrayContains(tokens[i][0], multiply, 2))
-      assembledInstrs[i] = multiply_instr(tokens[i], symbolTable);
+      assembledInstrs[i] = multiply_instr(tokens[i]);
     else if(arrayContains(tokens[i][0], singleDataTransfer, 2))
       assembledInstrs[i] = single_data_transfer(tokens[i], symbolTable);
     else if(arrayContains(tokens[i][0], branch, 7))
@@ -45,16 +45,6 @@ uint32_t* assemble(char*** tokens, uint32_t lines)
   return assembledInstrs;
 }
 
-uint8_t arrayContains(char* item, char** array, uint32_t arrayLen)
-{
-  uint32_t i;
-  for(i = 0; i < arrayLen ; i++)
-  {
-    if(strcmp(item, array[i]) == 0)
-      return 1;
-  }
-  return 0;
-}
 
 
 

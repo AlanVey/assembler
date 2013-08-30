@@ -17,8 +17,3 @@ uint32_t multiply_instr(char** line)
   return instr;
 }
 
-uint32_t regToInt(char* reg)
-{
-  char** endPtr;
-  return (uint32_t)strtol(&reg[1], endPtr, 10);
-}
