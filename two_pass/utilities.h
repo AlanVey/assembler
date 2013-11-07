@@ -7,4 +7,5 @@
 #define REG_M(x) (x << 0)
 
 uint32_t regToInt(char* reg);
+uint32_t toInt (char* int);
 uint8_t arrayContains(char* item, char** array, uint32_t arrayLen);
